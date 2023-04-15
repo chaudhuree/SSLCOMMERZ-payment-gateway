@@ -4,8 +4,9 @@ const { v4: uuidv4 } = require('uuid');
 
 // main payment function
 exports.sslPayment = async (req, res) => {
+  // console.log(req.body.total_amount);
   const tran_id = "chaudhuree_" + uuidv4();
-  amount = 100;
+  amount = req.body.total_amount;
 
   const data = {
     total_amount: amount,
@@ -41,8 +42,13 @@ exports.sslPayment = async (req, res) => {
 
 
     if (data?.GatewayPageURL) {
-      console.log(data);
-      return res.status(200).redirect(data?.GatewayPageURL);
+      // note: if we just want to use it from backend setup then uncomment these and comment the return res.status(200).json(data?.GatewayPageURL);
+
+      // return res.status(200).redirect(data?.GatewayPageURL);
+      // window.location.replace(data?.GatewayPageURL);
+      //note: from here we are handling the functionality to fontend. So we are just returning the url
+
+      return res.status(200).json(data?.GatewayPageURL);
     }
     else {
       return res.status(400).json({
@@ -65,33 +71,37 @@ exports.sslPaymentNotification = async (req, res) => {
 }
 
 exports.sslPaymentSuccess = async (req, res) => {
+  console.log(req.body.message);
 
-
-  return res.status(200).json(
-    {
-      data: req.body,
-      message: 'Payment success'
-    }
-  );
+  // return res.status(200).json(
+  //   {
+  //     data: req.body,
+  //     message: 'Payment success'
+  //   }
+  // );
+  //note: from the success page i am redirecting it back to the fontend sothat i can show the success message
+  return res.status(200).redirect('http://localhost:5173/paymentstatus/successfull');
 }
 
 exports.sslPaymentFail = async (req, res) => {
 
 
-  return res.status(200).json(
-    {
-      data: req.body,
-      message: 'Payment failed'
-    }
-  );
+  // return res.status(200).json(
+  //   {
+  //     data: req.body,
+  //     message: 'Payment failed'
+  //   }
+  // );
+  return res.status(400).redirect('http://localhost:5173/paymentstatus/failed');
 }
 
 exports.sslPaymentCancel = async (req, res) => {
 
-  return res.status(200).json(
-    {
-      data: req.body,
-      message: 'Payment cancelled'
-    }
-  );
+  // return res.status(499).json(
+  //   {
+  //     data: req.body,
+  //     message: 'Payment cancelled'
+  //   }
+  // );
+  return res.status(400).redirect('http://localhost:5173/paymentstatus/cancelled');
 }
