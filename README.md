@@ -49,5 +49,5 @@ http://localhost:5173/
 http://localhost:5173/dashboard
 ```
 
-[![Alt text](https://www.youtube.com/watch?v=FwWcGyrhJFo)](https://www.youtube.com/watch?v=FwWcGyrhJFo)
+[![Alt text](https://ibb.co/nzMvb0j)](https://www.youtube.com/watch?v=FwWcGyrhJFo)
 
