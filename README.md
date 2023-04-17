@@ -49,4 +49,5 @@ http://localhost:5173/
 http://localhost:5173/dashboard
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=FwWcGyrhJFo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Alt text](https://www.youtube.com/watch?v=FwWcGyrhJFo)](https://www.youtube.com/watch?v=FwWcGyrhJFo)
+
