@@ -20,9 +20,9 @@ exports.sslPayment = async (req, res) => {
     total_amount: amount,
     currency: "BDT",
     tran_id: transactionId,
-    success_url: `https://hatehatejonosheba.onrender.com/paymentsuccess`,
-    fail_url: `https://hatehatejonosheba.onrender.com/paymentfail`,
-    cancel_url: `https://hatehatejonosheba.onrender.com/paymentcancel`,
+    success_url: `http://localhost:${process.env.PORT}/paymentsuccess`,
+    fail_url: `http://localhost:${process.env.PORT}/paymentfail`,
+    cancel_url: `http://localhost:${process.env.PORT}/paymentcancel`,
     shipping_method: "No",
     product_name: "Computer.",
     product_category: "Electronic",
@@ -42,7 +42,7 @@ exports.sslPayment = async (req, res) => {
     value_b: "def002_B",
     value_c: "def003_C",
     value_d: "def004_D",
-    ipn_url: `https://hatehatejonosheba.onrender.com/paymentnotification`,
+    ipn_url: `http://localhost:${process.env.PORT}/paymentnotification`,
   };
 
   const sslcommerz = new SSLCommerzPayment(

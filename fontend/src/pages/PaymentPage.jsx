@@ -5,7 +5,7 @@ import React from "react";
 export default function PaymentPage() {
   // const handlePayment = async () => {
   //   const { data } = await axios.post(
-  //     "https://hatehatejonosheba.onrender.com/paymentcollection",
+  //     "http://localhost:5000/paymentcollection",
   //     {
   //       total_amount: 400,
   //     }
@@ -22,7 +22,7 @@ export default function PaymentPage() {
   // };
   const onFinish = async (values) => {
     const { data } = await axios.post(
-      "https://hatehatejonosheba.onrender.com/paymentcollection",
+      "http://localhost:5000/paymentcollection",
       {
         amount: values.amount,
         name: values.name,
