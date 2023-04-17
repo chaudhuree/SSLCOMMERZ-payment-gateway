@@ -1,0 +1,35 @@
+body {
+  overflow: hidden !important;
+}
+.ant-page-header-heading-title {
+  color: #d63384;
+}
+.ant-page-header-heading-sub-title {
+  color: #dc35468f;
+  font-size: 10px;
+}
+.ant-pagination {
+  display: none;
+}
+.ant-table-cell {
+  text-align: center !important;
+}
+
+.status {
+  background: #bcffbc;
+  padding: 60px 130px;
+  border-radius: 20px;
+  
+}
+.status>.title{
+  color: black;
+  font-size: 46px;
+  font-weight: bold;
+}
+.status>.subtitle{
+  font-size: 24px;
+}
+.status>.footer{
+  font-size: 18px;
+  color:#d63384;
+}
