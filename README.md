@@ -48,7 +48,7 @@ http://localhost:5173/
 ```
 http://localhost:5173/dashboard
 ```
-## click on the image to show website in video:
+## click on the image to see website in video:
 
 [![Alt text](https://i.ibb.co/gzZp37J/image.png)](https://www.youtube.com/watch?v=FwWcGyrhJFo)
 
