@@ -31,7 +31,7 @@ export default function Dashboard() {
   //data source for all events
   const getData = async () => {
     setLoading(true);
-    const { data } = await axios.get("http://localhost:5000/transactions");
+    const { data } = await axios.get("https://hatehatejonosheba.onrender.com/transactions");
     setDbdata(data.transactions);
     setLoading(false);
   };
@@ -40,7 +40,7 @@ export default function Dashboard() {
   const getCount = async () => {
     setLoading(true);
     const { data } = await axios.get(
-      "http://localhost:5000/transactions/count"
+      "https://hatehatejonosheba.onrender.com/transactions/count"
     );
     setCount(data.count);
     setLoading(false);
@@ -50,7 +50,7 @@ export default function Dashboard() {
   const handleSingleTransaction = async (id) => {
     showModal();
     const { data } = await axios.get(
-      `http://localhost:5000/transactions/${id}`
+      `https://hatehatejonosheba.onrender.com/transactions/${id}`
     );
 
     setSingleTransaction(data?.transaction);
@@ -149,7 +149,7 @@ export default function Dashboard() {
         {loading ? (
           <p>loading...</p>
         ) : (
-          <Table columns={columns} dataSource={Data}/>
+          <Table columns={columns} dataSource={Data} />
         )}
       </Col>
 
